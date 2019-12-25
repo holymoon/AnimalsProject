@@ -3,7 +3,7 @@ package com.example.animalsproject;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -29,7 +29,7 @@ public class RecyclerOneAdapter extends RecyclerView.Adapter<RecyclerOneAdapter.
     public void onBindViewHolder(@NonNull RecyclerOneViewHolder holder, int position) {
 
 
-             holder.txtAnimal.setText(myList.get(position));
+             holder.btnAnimals.setText(myList.get(position));
 
     }
 
@@ -39,10 +39,10 @@ public class RecyclerOneAdapter extends RecyclerView.Adapter<RecyclerOneAdapter.
     }
 
     class RecyclerOneViewHolder extends  RecyclerView.ViewHolder{
-         TextView txtAnimal;
+        Button btnAnimals;
         public RecyclerOneViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtAnimal =itemView.findViewById(R.id.txtAnimal);
+            btnAnimals =itemView.findViewById(R.id.btnAnimals);
         }
     }
 }
